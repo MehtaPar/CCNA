@@ -1,4 +1,4 @@
-# CCNA
+# CCNA Exam Guide
 CCNA study guide and notes
 
 # Table of Contents
