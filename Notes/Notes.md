@@ -14,13 +14,13 @@ WAN = Wide Area Network (When 2 seperate LANs are connected)
 4. Transport | TCP/UDP, Port | Segments
 3. Network | IP Address | Packets
 2. Data-Link | Ethernet MAC Address | Frames
-1. Physical | Signals, Binary | Bits
+1. Physical | Signals, Binary | Bits  {: reversed="reversed"}
 
 ## TCP/IP Model:
 4. Application | Data
 3. Transport | Segments
 2. Internet | Packets
-1. Network Access | Frames and Bits
+1. Network Access | Frames and Bits  {: reversed="reversed"}
 
 ## Encapsulation/Decapsulation
 Encapsulation will go down from layers 7 to 1
