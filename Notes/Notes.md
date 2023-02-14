@@ -80,34 +80,83 @@ Deencapsulation will go up from layers 1 to 7
 - Public IP Range: 1.0.0.0 to 127.0.0.0
 - Private IP Range: 10.0.0.0 to 10.255.255.255
 
-### Class B IP Addresses: (128.0.0.0 - 191.255.0.0/16)
+### Class B IP Addresses: (128.0.0.0 to 191.255.0.0/16)
 - Class B are assigned to medium-sized to large-sized networks
 - two high-order bits in class B are always set to binary 1 0. (10111111)
 - default subnet mask is /16
-- valid network addresses range from 128.0.0.0 - 191.255.0.0/16
+- valid network addresses range from 128.0.0.0 to 191.255.0.0/16
 
 - Public IP Range: 128.0.0.0 to 191.255.0.0
 - Private IP Range: 172.16.0.0 to 172.31.255.255
 
-### Class C IP Addresses: (192.0.0.0 - 223.255.255.0/24)
+### Class C IP Addresses: (192.0.0.0 to 223.255.255.0/24)
 - Class C are assigned to small networks
 - 3 high-order bits in class C address are always set to binary 1 1 0. (11011111)
 - default subnet mask is /24
-- valid network addresses range from 128.0.0.0 - 191.255.0.0/16
+- valid network addresses range from 128.0.0.0 to 191.255.0.0/16
 
 - Public IP Range: 192.0.0.0 to 223.255.255.0
 - Private IP Range: 192.168.0.0 to 192.168.255.255 
 
-### Class D IP Addresses: (224.0.0.0 - 239.255.255.255)
+### Class D IP Addresses: (224.0.0.0 to 239.255.255.255)
 - Reserved for IP Multicast Addresses
 - 4 high-order bits are always set to binary 1 1 1 0 (11101111)
 - not allocated to hosts and no default subnet mask
 
-### Class E IP Addresses: (240.0.0.0 - 255.255.255.255)
+### Class E IP Addresses: (240.0.0.0 to 255.255.255.255)
 - Reserved for future use and experimental
 - high-order bits are set to 1 1 1 1. (11110000) 
 - not allocated to hosts and no default subnet mask
 - 255.255.255.255 is the broadcast address for "this network"
+
+### Private IP Address Ranges:
+- 10.0.0.0/8 (Class A)
+- 172.16.0.0/12 (Class B)
+- 192.168.0.0/16 (Class C)
+
+## Data-Link Layer (L2)
+- Ethernet Layer, Frames
+- Ethernet Header: Preamble (8 bytes) | Dest. Address (6 bytes) | Source Address (6 bytes) | Length/Ethertype (46-1500 bytes) | FCS (4 Bytes) 
+- FCS = Frame Check Sequence
+- MAC address is 48-bit hexadecimal
+- first 24 bits of mac is OUI (Organizationally Unique Identifier) - unique to manufacturer of ethernet port
+- last 24 bits is vendor assigned
+- burned in MAC address on every NIC port in the world is globally unique!
+
+Commands to find MAC address:
+- ipconfig /all = to find the MAC address on Windows OS
+- ifconfig = to find the MAC address on Linux OS
+- show interface = to find MAC address on Cisco device
+
+## Straight-Through vs Crossover UTP Cables
+- Like devices will require crossover cables (rotuer to router, swithc to switch, pc to pc)
+- Unlike devices will require straight-through cables
+- most modern devices will have Auto-MDIX enabled, which does not require the use of crossover cable since the device can detect the cable and convert it accordingly
+
+## Fiber Optic Cables
+- used for longer distances
+- single mode, supports higher badnwidth and longer distance, more expensive 
+- multi mode, cheaper, shorter distance
+
+## PoE (Power over Ethernet)
+- Ethernet switch that sends power through the network cable, doesn't require a power supply for end devices
+
+## Hubs and Switches
+### Hubs
+- operate in half-duplex mode
+- cannot send and receive data at same time, only one at a time
+- all hosts share the same collision domain, only one device can transmit at a time
+- Hosts use CSMA/CD to detect collisions and resend
+- operate in layer 1, they are not MAC address aware!
+
+### Switches
+- operate in either full-duplex or half-duplex mode
+- typically set up in full-duplex
+- attached hosts can send and receive data at same time
+- all hosts have their own dedicated collision domain
+- collision detection is not required
+- operate at layer 2, are MAC address aware!
+- MAC address table to keep a cached table of hosts MACs with corresponding ports
 
 
 
