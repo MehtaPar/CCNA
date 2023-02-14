@@ -1,4 +1,5 @@
 # **CCNA 200-301 Notes:**
+## *Notes written by Param Mehta*
 
 
 LAN = Local Area Network
@@ -50,15 +51,63 @@ Deencapsulation will go up from layers 1 to 7
 - no flow control
 - if error detection and recovery is required, it is up to the upper layers to provide it
 
+## Unicast, Broadcast, and Multicast Traffic:
+- Unicast traffic goes to a single host
+- Broadcast traffic is to all hosts on the subnet 
+- Multicast traffic is to multiple interested hosts
 
+### Broadcast v.s. Multicast
+- Broadcast is sent out to all hosts no matter if the host had requested it 
+- Multicast is sent out to multiple hosts that have requested that same data
 
+## IPv4 Address
+- a ipv4 address is 32 bits long
+- written as 4 'octets' in dotted decimal format
+- example: *192.168.10.15*
+- each octet is 8 bits long (4 x 8 = 32)
 
+## DHCP Server
+- Automatically configures host ip addresses
 
+## Public/Private IPv4 Address Range:
 
+### Class A IP Addresses: (1.0.0.0 to 127.0.0.0/8)
+- Assigned to networks with a very large number of hosts
+- high-order (first) bit in a class A address is always set to zero! (01111111)
+- The default subnet mask is /8
+- valid network addresses range from 1.0.0.0 to 127.0.0.0/8
 
+- Public IP Range: 1.0.0.0 to 127.0.0.0
+- Private IP Range: 10.0.0.0 to 10.255.255.255
 
+### Class B IP Addresses: (128.0.0.0 - 191.255.0.0/16)
+- Class B are assigned to medium-sized to large-sized networks
+- two high-order bits in class B are always set to binary 1 0. (10111111)
+- default subnet mask is /16
+- valid network addresses range from 128.0.0.0 - 191.255.0.0/16
 
+- Public IP Range: 128.0.0.0 to 191.255.0.0
+- Private IP Range: 172.16.0.0 to 172.31.255.255
 
+### Class C IP Addresses: (192.0.0.0 - 223.255.255.0/24)
+- Class C are assigned to small networks
+- 3 high-order bits in class C address are always set to binary 1 1 0. (11011111)
+- default subnet mask is /24
+- valid network addresses range from 128.0.0.0 - 191.255.0.0/16
+
+- Public IP Range: 192.0.0.0 to 223.255.255.0
+- Private IP Range: 192.168.0.0 to 192.168.255.255 
+
+### Class D IP Addresses: (224.0.0.0 - 239.255.255.255)
+- Reserved for IP Multicast Addresses
+- 4 high-order bits are always set to binary 1 1 1 0 (11101111)
+- not allocated to hosts and no default subnet mask
+
+### Class E IP Addresses: (240.0.0.0 - 255.255.255.255)
+- Reserved for future use and experimental
+- high-order bits are set to 1 1 1 1. (11110000) 
+- not allocated to hosts and no default subnet mask
+- 255.255.255.255 is the broadcast address for "this network"
 
 
 
