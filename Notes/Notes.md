@@ -8,19 +8,19 @@ WAN = Wide Area Network (When 2 seperate LANs are connected)
 ## OSI Model:
 
 ### Layers:
-- 7: Application | Data
-- 6: Presentation | Data
-- 5: Session | Data
-- 4: Transport | TCP/UDP, Port | Segments
-- 3: Network | IP Address | Packets
-- 2: Data-Link | Ethernet MAC Address | Frames
-- 1: Physical | Signals, Binary | Bits  
+- Layer 7: Application | Data
+- Layer 6: Presentation | Data
+- Layer 5: Session | Data
+- Layer 4: Transport | TCP/UDP, Port | Segments
+- Layer 3: Network | IP Address | Packets
+- Layer 2: Data-Link | Ethernet MAC Address | Frames
+- Layer 1: Physical | Signals, Binary | Bits  
 
 ## TCP/IP Model:
-- 4: Application | Data
-- 3: Transport | Segments
-- 2: Internet | Packets
-- 1: Network Access | Frames and Bits  
+- Layer 4: Application | Data
+- Layer 3: Transport | Segments
+- Layer 2: Internet | Packets
+- Layer 1: Network Access | Frames and Bits  
 
 ## Encapsulation/Decapsulation
 Encapsulation will go down from layers 7 to 1
