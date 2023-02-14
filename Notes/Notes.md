@@ -186,12 +186,21 @@ Additional DNS Server Commands:
 - `ip dns server`
 - `ip host LinuxA 172.23.4.2`
 
+## Address Resolution Protocol (ARP)
+- ARP is used to map the IP Address to MAC address
+- sender will send ARP request will flood out all ports except ingress, destination host will reply with MAC address, sender will send the frames successfully, destination host will reply with aknowledgement back to sender (LAN envrionment)
+- sender will send ARP request to router, router will reply, sender will reply with sending the frames, destination host will reply with aknowledgement back to sender (WAN environment)
+-  `show arp` (view the arp table)
+- `clear arp-cache` (clears the cached arp table)
 
-
-
-
-
-
+## Cisco Troubleshotting Methodology
+1. Define the Problem
+2. Gather Information
+3. Analyze Information
+4. Eliminate Potential Causes
+5. Propose Hypothesis
+6. Test Hypothesis
+7. Solve Problem and Document Solution
 
 
 
