@@ -157,8 +157,34 @@ Commands to find MAC address:
 - collision detection is not required
 - operate at layer 2, are MAC address aware!
 - MAC address table to keep a cached table of hosts MACs with corresponding ports
+- more ports available than routers
 
+## Routers
+- Ability to route traffic between different IP subnets on a network
+- required to send traffic from one subnet to another
+- operate at layer 3
+- less ports available than switches
 
+## Layer 3 Switch
+- Operates on the layer 3 and route traffic between IP Subnets like a router
+
+## Domain Name System (DNS)
+- resolves a fully qualified domain name (FQDN) such as www.cisco.com to an IP Address
+- hosts will send their DNS queries to this server
+- Enterprises will typically have an internal DNS server which can resolve the ip addresses of the internal hosts
+- if the internal DNS server cannot resolve a query, it will forward the request out to the public DNS servers on the internet
+- DNS requests are sent using UDP port 53 (and can fail over to TCP)
+
+### DNS Commands:
+DNS Client:
+- `ip domain-lookup`
+- `ip name-server 172.23.4.1`
+- `ip domain-name flackboxA.lab` (primary domain name)
+- `ip domain-list flackboxB.lab` (additional DNS suffixes to search)
+
+Additional DNS Server Commands:
+- `ip dns server`
+- `ip host LinuxA 172.23.4.2`
 
 
 
