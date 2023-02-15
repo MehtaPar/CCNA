@@ -240,6 +240,9 @@ Cisco routers and switches have 4 built-in memory locations:
 
 An external USB device can also be used
 
+## Local Routes
+- Will always show as "L" if it has a /32
+
 
 
 
