@@ -202,8 +202,34 @@ Additional DNS Server Commands:
 6. Test Hypothesis
 7. Solve Problem and Document Solution
 
+## CDP
+- CDP (Cisco Discovery Protocol) is a Cisco proprietary Layer 3 protocol
+- used to share info with other directly connected Cisco equipment, such as the operating system version and IP address
+- enabled by default on most Cisco equipment
+- works at Layer 2, IP address is not neccessary 
 
+- `cdp run` will enable CDP if disabled
+- `no cdp run` will disable CDP globally on the device
+- `no cdp enable` will disable at the interface level
+- `show cdp` will show cdp details and if it's enabled
+- `show cdp neighbors` will show summary view
+- `show cdp neighbors detail` will show details of neighbor devices
 
+## LLDP
+- LLDP (Link Layer Discovery Protocol) is an open standard protocol which provides similar info to CDP
+
+- Differences with CDP:
+- depending on the switch and version it may be disabled by default
+- it is only supported on physical interfaces
+- sit can only discover up to one device per port
+- it can discover Linux servers
+
+- `lldp run` will enable lldp
+- `no lldp run` will disable lldp globally on the device
+- `no lldp transmit` will disable lldp at interface level 
+- `show lldp` will show details on lldp
+- `show lldp neighbors` will show summary of info on lldp neighbor devices
+- `show lldp neighbors detail` will show detailed info on lldp neighbor devices
 
 
 
