@@ -228,9 +228,17 @@ Additional DNS Server Commands:
 - `no lldp run` will disable lldp globally on the device
 - `no lldp transmit` will disable lldp at interface level 
 - `show lldp` will show details on lldp
-- `show lldp neighbors` will show summary of info on lldp neighbor devices
+- `show lldp neighbors` will show summary of info on lldp neighbor devicese
 - `show lldp neighbors detail` will show detailed info on lldp neighbor devices
 
+## Cisco Device Memory
+Cisco routers and switches have 4 built-in memory locations:
+- ROM: Read Only Memory
+- Flash: newer devices use removable CompactFlash
+- NVRAM: Non-Volatile RAM
+- RAM: Random Access Memory
+
+An external USB device can also be used
 
 
 
